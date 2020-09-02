@@ -1,0 +1,16 @@
+* HOW TO PULL FROM MASTER
+- `git pull origin master`
+
+* HOW TO SWITCH BRANCH
+- `git checkout -b BRANCH_NAME`
+
+* HOW TO ADD CODE TO GITHUB
+- `git add .`
+- `git commit -m'MESSAGE HERE'`
+- `git push origin BRANCH_NAME` (NOT MASTER!!!!!!!)
+- make pull-request (PR) on GITHUB
+
+* MADE A MISTAKE AND WANT TO START OVER FROM MASTER?? DO THIS:
+- `git stash`
+(stashed away the new code onto another commit and starts you on a fresh place???)
+VIOLA! ;)
