@@ -27,7 +27,7 @@ async function getLinkById(id){
     FROM link
     WHERE id = $1`, [ id ])
 
-    return activity
+    return link
   } catch (error) {
     throw error
   }
@@ -48,10 +48,25 @@ async function createLink ({url, comment}){
 
 // tag table
 
+async function createTag ({tag_name}){
+  try {
+    const { rows: [tags]} = client.query(`
+    INSERT INTO tags (tag_name)
+    VALUES ($1)
+    RETURNING *;`, [tag_name])
 
+    return tags
+  } catch (error) {
+    throw error
+  }
+}
 
 // export
 module.exports = {
   client,
-  // db methods
+  getAllLinks,
+  getLinkById,
+  createLink,
+  createTag
+  
 }
