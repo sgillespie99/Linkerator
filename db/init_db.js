@@ -1,7 +1,10 @@
 // code to build and initialize DB goes here
 const {
-  client
-  // other db methods 
+  client,
+  getAllLinks,
+  getLinkById,
+  createLink,
+  createTag
 } = require('./index');
 
 async function buildTables() {
@@ -52,9 +55,28 @@ async function buildTables() {
   }
 }
 
+
+// Initial data functions:
+async function createInitialLinks (){
+  try {
+    console.log('creating initial links')
+    await createLink({ 
+      url: 'https://www.google.com/',
+      comment: 'the Search spot'
+    })
+
+
+  } catch (error) {
+    throw error
+  }
+}
+
+
+
+
 async function populateInitialData() {
   try {
-    // create useful starting data
+   await createInitialLinks()
   } catch (error) {
     throw error;
   }
@@ -62,10 +84,25 @@ async function populateInitialData() {
 
 
 async function testDb(){
+try {
+  console.log('testing Database')
 
+  console.log('calling getAllLinks')
+  const links = await getAllLinks();
+  console.log('getAllLinks:', links)
+
+  console.log('calling getLinkById')
+  const linkById = await getLinkById(1)
+  console.log('getLinkById:', linkById)
+
+
+} catch (error) {
+  throw error
+}
 }
 
 buildTables()
   .then(populateInitialData)
+  .then(testDb)
   .catch(console.error)
   .finally(() => client.end());
