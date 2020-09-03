@@ -4,7 +4,8 @@ const {
   getAllLinks,
   getLinkById,
   createLink,
-  createTag
+  createTag,
+  getAllTags
 } = require('./index');
 
 async function buildTables() {
@@ -71,12 +72,22 @@ async function createInitialLinks (){
   }
 }
 
-
+async function createInitialTags (){
+  try{
+    console.log('creating initial tags')
+    await createTag({
+      tag_name: 'words'
+    })
+  } catch (error){
+    throw error
+  }
+}
 
 
 async function populateInitialData() {
   try {
    await createInitialLinks()
+   await createInitialTags()
   } catch (error) {
     throw error;
   }
@@ -94,6 +105,10 @@ try {
   console.log('calling getLinkById')
   const linkById = await getLinkById(1)
   console.log('getLinkById:', linkById)
+
+  console.log('calling getAllTags')
+  const tags = await getAllTags();
+  console.log('getAllTags:', tags)
 
 
 } catch (error) {

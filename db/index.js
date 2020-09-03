@@ -62,8 +62,8 @@ async function createLink({ url, comment }) {
 async function createTag({ tag_name }) {
   try {
     const {
-      rows: [tags],
-    } = client.query(
+      rows: [tags]
+    } = await client.query(
       `
     INSERT INTO tags (tag_name)
     VALUES ($1)
@@ -77,6 +77,18 @@ async function createTag({ tag_name }) {
   }
 }
 
+async function getAllTags(){
+  try {
+    const { rows } = await client.query(`
+    SELECT * 
+    FROM tags;`)
+
+    return rows;
+  } catch (error) {
+    throw error
+  }
+}
+
 // export
 module.exports = {
   client,
@@ -84,4 +96,5 @@ module.exports = {
   getLinkById,
   createLink,
   createTag,
+  getAllTags
 };
