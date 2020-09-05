@@ -1,9 +1,18 @@
 import axios from 'axios';
 
-const { getAllLinks,
+const {   getAllLinks,
   getLinkById,
+  getLinksByTagName,
   createLink,
-  createTag } = require('../db')
+  updateLink,
+  deleteLink,
+  createTags,
+  getAllTags,
+  createLinkTag,
+  addTagsToLinks,
+  deleteTag } = require('../db')
+
+  
 
 export async function getSomething() {
   try {
