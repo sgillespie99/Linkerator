@@ -48,7 +48,7 @@ async function getLinkById(id) {
 
     return link;
   } catch (error) {
-    throw error;
+    throw Error("Error finding link by Id");
   }
 }
 
@@ -145,7 +145,7 @@ async function deleteLink(id) {
     WHERE id=$1;
     `, [id]);
 
-    return `Deleted Link: ${1}`;
+    return `Deleted Link: ${id}`;
   } catch (error) {
     throw error;
   }
@@ -252,8 +252,6 @@ async function deleteTag(id) {
     FROM link_tags
     WHERE "tagId"=$1
     `, [id]);
-
-    console.log("linkTags", linkTags);
 
     if (linkTags.length > 0) {
       throw Error('This tag is tied to an exisiting Link');
