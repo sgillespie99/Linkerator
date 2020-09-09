@@ -1,19 +1,7 @@
 import axios from 'axios';
-
-const { client,  
-  getAllLinks,
-  getLinkById,
-  getLinksByTagName,
-  createLink,
-  updateLink,
-  deleteLink,
-  createTags,
-  getAllTags,
-  createLinkTag,
-  addTagsToLinks,
-  deleteTag } = require('../db')
-
   
+// can use local host to start before deploying to heroku: http://localhost:3000/api/
+const client = '/'
 
 export async function getSomething() {
   try {
