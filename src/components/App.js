@@ -4,9 +4,9 @@ import { getSomething, getLinks } from '../api';
 
 import './App.css';
 
-import Aside from './aside';
+import Aside from './Aside';
 import Header from './Headers';
-import Results from './results';
+import Results from './Results';
 
 const App = () => {
 	const [message, setMessage] = useState('');
@@ -24,10 +24,12 @@ const App = () => {
 
 	return (
 		<div className="App">
-			
+
 			<Header />
-			{/* <Results /> */}
-			<Aside />
+			<div className="feature">
+				<Results />
+				<Aside />
+			</div>
 			{/* <h2>{message}</h2> */}
 		</div>
 	);
