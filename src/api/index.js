@@ -16,7 +16,7 @@ export async function getLinks() {
 	try {
 		const { data } = await axios.get(`${client}/links`);
 		console.log(data);
-		return data;
+		return data.links;
 	} catch (error) {
 		throw error;
 	}
@@ -25,7 +25,7 @@ export async function getLinks() {
 export async function getTags() {
 	try {
 		const { data } = await axios.get(`${client}/tags`);
-		return data;
+		return data.tags;
 	} catch (error) {
 		throw error;
 	}
@@ -34,5 +34,5 @@ export async function getTags() {
 export async function getLinksById(id) {
 	try {
 		const { data } = await axios.get(`${client}/links/${id}`);
-	} catch (error) {}
+	} catch (error) { }
 }

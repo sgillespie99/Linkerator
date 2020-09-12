@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { getSomething, getLinks } from '../api';
+import { getLinks } from '../api';
 
 import './App.css';
 
@@ -9,25 +9,26 @@ import Header from './Headers';
 import Results from './Results';
 
 const App = () => {
-	const [message, setMessage] = useState('');
+	const [linkList, setLinkList] = useState([]);
+	const [results, setResults] = useState([]);
 
 	useEffect(() => {
 		getLinks()
-			.then((response) => {
-				console.log(response);
-				setMessage(response.message);
+			.then(links => {
+				setLinkList(links)
 			})
-			.catch((error) => {
-				setMessage(error.message);
+			.catch(error => {
+				console.error(error);
 			});
-	});
+	}, []);
 
 	return (
 		<div className="App">
 
 			<Header />
 			<div className="feature">
-				<Results />
+				<Results linkList={linkList}
+					results={results} />
 				<Aside />
 			</div>
 			{/* <h2>{message}</h2> */}
