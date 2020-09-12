@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-import './results.css';
+import './Results.css';
 
 
 const ResultsCard = () => {
-    
+
 }
 
 

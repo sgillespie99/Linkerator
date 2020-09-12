@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+.resultsBlock {
+    height: 450px;
+    width: 600px;
+    background-color: #fbf4f436;
+    border-radius: 15px;
+    margin: 15px;
+    box-shadow: 2px 2px 3px #00000052;
+}
