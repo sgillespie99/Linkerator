@@ -1,19 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import './Results.css';
 
+import Link from './Link';
 
-const ResultsCard = () => {
-
-}
-
-
-const Results = () => {
+const Results = ({ results, linkList }) => {
+    // if (results) {
+    //     return (
+    //         <div className='resultsBlock'>
+    //             {
+    //                 results.map(result => (
+    //                     <Link key={result.id} {...result} />
+    //                 ))
+    //             }
+    //         </div>
+    //     )
+    // } else {
     return (
         <div className='resultsBlock'>
-
+            {
+                linkList.map(link => (
+                    <Link key={link.id} {...link} />
+                ))
+            }
         </div>
     )
+    // }
 };
 
 export default Results;
