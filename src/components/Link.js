@@ -6,7 +6,7 @@ const Link = ({ url, comment, click_count, tags }) => {
 	return (
 		<div id="Link">
 			<div className="linkHead">
-				<p className="urlName">{url}</p>
+				<a href={url} className="urlName">{url}</a>
 				<p className="clickCount">{click_count}</p>
 			</div>
 			<div className="linkBody">

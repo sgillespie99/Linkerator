@@ -6,9 +6,7 @@ import './Results.css';
 
 import Link from './Link';
 
-async function handleSubmit(event) {
-	event.preventDefault();
-}
+
 
 // const resultLinks = await getLinks({
 //     url,
@@ -27,12 +25,13 @@ const Results = ({ results, linkList }) => {
 	//         </div>
 	//     )
 	// } else {
-	console.log(linkList);
+    console.log(linkList);
+    
 	return (
 		<div className="resultsBlock">
 			<h1>
 				{' '}
-				Just some words
+				
 				{linkList.map((link) => (
 					<Link key={link.id} {...link} />
 				))}
