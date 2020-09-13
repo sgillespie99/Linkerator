@@ -31,8 +31,22 @@ export async function getTags() {
 	}
 }
 
+
 export async function getLinksById(id) {
 	try {
 		const { data } = await axios.get(`${client}/links/${id}`);
 	} catch (error) { }
+}
+
+
+export async function createLink(url, comment, tags = []) {
+	try {
+		console.log('url', url, 'comment', comment, 'tags', tags);
+		const { data } = await axios.post(`${client}/links`, {
+			url, comment, tags
+		})
+		return data
+	} catch (error) {
+		throw error
+	}
 }
