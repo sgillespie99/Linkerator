@@ -9,6 +9,7 @@ const Link = ({ url, comment, click_count, tags }) => {
 				<a href={url} className="urlName">{url}</a>
 				<p className="clickCount">{click_count}</p>
 			</div>
+			<div className="linkContain">
 			<div className="linkBody">
 				<p className="linkComment">{comment}</p>
 				<p className="linkTags">{tags.map((t) => t.tag_name).join(' ')}</p>
@@ -16,6 +17,7 @@ const Link = ({ url, comment, click_count, tags }) => {
 			<div className="linkUtils">
 				<button>Edit</button>
 				<button>Delete</button>
+			</div>
 			</div>
 		</div>
 	);

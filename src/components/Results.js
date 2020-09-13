@@ -20,10 +20,17 @@ const Results = ({ results, linkList }) => {
 	//         </div>
 	//     )
 	// } else {
-    console.log(linkList);
-    
+	console.log(linkList);
+
 	return (
 		<div className="resultsBlock">
+
+			<div className="scrollBar">
+				{linkList.map((link) => (
+					<Link key={link.id} {...link} />
+				))}
+			</div>
+
 			
 				{' '}
 				
@@ -31,6 +38,7 @@ const Results = ({ results, linkList }) => {
 					<Link key={link.id} {...link} />
 				))}
 			
+
 		</div>
 	);
 	// }
