@@ -8,11 +8,6 @@ import Link from './Link';
 
 
 
-// const resultLinks = await getLinks({
-//     url,
-//     comment
-// })
-
 const Results = ({ results, linkList }) => {
 	// if (results) {
 	//     return (
@@ -29,13 +24,13 @@ const Results = ({ results, linkList }) => {
     
 	return (
 		<div className="resultsBlock">
-			<h1>
+			
 				{' '}
 				
 				{linkList.map((link) => (
 					<Link key={link.id} {...link} />
 				))}
-			</h1>
+			
 		</div>
 	);
 	// }
