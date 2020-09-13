@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import { createLink, getLinks } from '../api'
 
-import { createLink } from '../api'
 
 import './Aside.css';
 

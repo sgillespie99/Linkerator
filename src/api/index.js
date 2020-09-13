@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // can use local host to start before deploying to heroku: http://localhost:3000/api/
-const client = 'https://calm-ridge-12860.herokuapp.com/api';
+const client = 'http://localhost:5000/api';
 
 export async function getSomething() {
 	try {
@@ -39,14 +39,26 @@ export async function getLinksById(id) {
 }
 
 
-
-export async function createLink({ url, comment, tags = [] }) {
+export async function createLink({url, comment, tags = []}) {
 	try {
 		const { data } = await axios.post(`${client}/links`, {
-			url: url, comment: comment, tags: tags
+			url: `${url}`,
+			comment: `${comment}`,
+			tags: `${tags}`
 		})
 		return data
 	} catch (error) {
 		throw error
 	}
 }
+
+// export async function deleteLink(id){
+// 	try {
+// 	const { data } = await axios.delete(`${client}/links/${id}`)
+	
+// 	return data
+	
+// 	} catch (error) {
+		
+// 	}
+// }

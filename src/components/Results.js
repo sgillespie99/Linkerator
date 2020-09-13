@@ -14,15 +14,6 @@ const Results = ({ results, linkList }) => {
 					<Link key={link.id} {...link} />
 				))}
 			</div>
-
-			
-				{' '}
-				
-				{linkList.map((link) => (
-					<Link key={link.id} {...link} />
-				))}
-			
-
 		</div>
 	);
 };
