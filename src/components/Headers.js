@@ -27,7 +27,7 @@ let Header = ({setResults}) => {
 			</div>
 			<div className="searchBlock">
 				
-                    <form onSubmit={handleSubmit}>
+                    <form>
 					<input className="searchForm" type="text" placeholder="Search by Tag"></input>
                     
 				
