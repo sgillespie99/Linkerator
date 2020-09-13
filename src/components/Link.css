@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+div#Link {
+    width: 550px;
+    height: 100px;
+    margin: 10px;
+    background-color: #ffffff7a;
+    padding: 10px;
+    font-family: 'VT323', monospace;
+    border-radius: 15px;
+    box-shadow: 2px 2px 3px #00000052;
+}
+
+/*  * Link Head * */
+
+.linkHead {
+    display: flex;
+    justify-content: space-between;
+}
+
+a.urlName:hover {
+    text-shadow: 1px 1px 2px #0f3f19d1;
+}
+a.urlName {
+    color: #4fff6d;
+    text-shadow: 1px 1px 2px #0c0800;
+    letter-spacing: 0.5px;
+    width: 500px;
+}
+
+/* * Link Body * */
+.linkBody {
+    display: flex;
+    justify-content: space-between;
+}
