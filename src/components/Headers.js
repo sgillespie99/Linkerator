@@ -7,10 +7,12 @@ import {
 
 import './Headers.css';
 
+
 let Header = ({ setResults }) => {
     const [url, comments] = useState(' ')
 
     async function handleSubmit(event) {
+
         event.preventDefault()
 
         const link = await getLinks({
@@ -20,6 +22,7 @@ let Header = ({ setResults }) => {
 
         setResults(link)
     }
+
     return (
         <div className="headerBlock">
             <div className="title">
@@ -38,6 +41,7 @@ let Header = ({ setResults }) => {
             </div>
         </div>
     );
+
 };
 
 export default Header;
