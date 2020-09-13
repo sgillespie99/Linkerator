@@ -21,6 +21,12 @@
     margin-top: 10px;
 }
 
+.searchBlock > form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 /*  * Input * */
 
 input.searchForm {

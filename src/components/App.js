@@ -10,13 +10,13 @@ import Results from './Results';
 
 const App = () => {
 	const [linkList, setLinkList] = useState([]);
-  const [results, setResults] = useState([]);
-  const [newLink, setNewLink] = useState([])
+	const [results, setResults] = useState([]);
+	const [newLink, setNewLink] = useState([])
 
 	useEffect(() => {
 		getLinks()
 			.then(links => {
-				setLinkList(links)
+				setLinkList(links);
 			})
 			.catch(error => {
 				console.error(error);
@@ -30,7 +30,8 @@ const App = () => {
 			<div className="feature">
 				<Results linkList={linkList}
 					results={results} />
-				<Aside setNewLink={setNewLink}/>
+				<Aside setNewLink={setNewLink}
+					setLinkList={setLinkList} />
 			</div>
 			{/* <h2>{message}</h2> */}
 		</div>
