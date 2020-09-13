@@ -39,12 +39,11 @@ export async function getLinksById(id) {
 }
 
 
-export async function createLink(url, comment, tags = []) {
+
+export async function createLink({ url, comment, tags = [] }) {
 	try {
 		const { data } = await axios.post(`${client}/links`, {
-			url: `${url}`,
-			comment: `${comment}`,
-			tags: `${tags}`
+			url: url, comment: comment, tags: tags
 		})
 		return data
 	} catch (error) {
