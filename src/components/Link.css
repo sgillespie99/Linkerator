@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 
 div#Link {
-    width: 550px;
-    height: 100px;
+    width: 750px;
+    height: auto;
     margin: 10px;
     background-color: #ffffff7a;
     padding: 10px;
     font-family: 'VT323', monospace;
+    font-size: 25px;
     border-radius: 15px;
     box-shadow: 2px 2px 3px #00000052;
+}
+
+h4 {
+    letter-spacing: 1px;
 }
 
 /*  * Link Head * */
@@ -19,17 +24,51 @@ div#Link {
 }
 
 a.urlName:hover {
-    text-shadow: 1px 1px 2px #0f3f19d1;
+    text-shadow: 1px 1px 2px #00ff35d1;
 }
 a.urlName {
-    color: #4fff6d;
-    text-shadow: 1px 1px 2px #0c0800;
+    color: #010602;
+    text-shadow: 1px 1px 2px #41bd39;
     letter-spacing: 0.5px;
     width: 500px;
+    font-size: 20px;
+}
+.visited {
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+}
+
+.visited > p {
+    margin-left:5px;
 }
 
 /* * Link Body * */
 .linkBody {
+    margin-top: 5px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+/*  * Link Foot * */
+
+.linkUtils {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.linkUtils button {
+    background: rgb(63,155,251);
+    background: radial-gradient(circle, rgb(29 81 136) 0%, rgb(28 204 34) 100%);
+    font-size: 15px;
+    font-weight: 600;
+    width: auto;
+    padding: 10px;
+    color: black;
+    text-shadow: 1px 1px 4px white;
+    border-radius: 50px;
+    box-shadow: 2px 2px 3px #00000052;
+    cursor: pointer;
 }
