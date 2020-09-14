@@ -3,6 +3,7 @@
 /* **  Page Title  ** */
 .title > h1 {
     font-family: 'Press Start 2P', cursive;
+    font-size: 56px;
     margin: 10px;
     background: -webkit-linear-gradient(#13ff3c, #e6e83a);
     -webkit-background-clip: text;
@@ -35,8 +36,9 @@ input.searchForm {
     margin-right: 20px;
     padding-left: 10px;
     font-family: 'VT323', monospace;
-    width: 425px;
-    height: 20px;
+    font-size: 20px;
+    width: 600px;
+    height: 25px;
     background-color: #f5f5f5bf;
     cursor: text;
     box-shadow: 2px 2px 3px #00000052;
@@ -49,6 +51,6 @@ button {
 }
 
 img.naviSearch {
-    height: 40px;
+    height: 60px;
     cursor: pointer;
 }
