@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+// import { client } from './db'
+
 // can use local host to start before deploying to heroku: http://localhost:3000/api/
-const client = 'http://localhost:5000/api';
+const client = '/api';
 
 export async function getSomething() {
 	try {
